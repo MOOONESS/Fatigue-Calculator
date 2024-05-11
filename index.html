@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur de Fatigue</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="container">
+    <h1>Évaluation de la Fatigue</h1>
+    <form id="fatigueForm" action="result.html" method="GET">
+        <label for="wakeupTime">À quelle heure vous êtes-vous réveillé(e) ce matin ?</label>
+        <input type="time" id="wakeupTime" name="wakeupTime" required>
+
+        <label for="freshnessLevel">Sur une échelle de 1 à 10, comment évaluez-vous votre niveau de fraîcheur et de repos ce matin ?</label>
+        <input type="number" id="freshnessLevel" name="freshnessLevel" min="1" max="10" required>
+
+        <label for="substanceUse">Avez-vous consommé de l'alcool ou des médicaments qui pourraient affecter votre vigilance au cours des dernières 24 heures?</label>
+        <input type="checkbox" id="substanceUse" name="substanceUse">
+
+        <label for="sleepDisturbance">Avez-vous eu des problèmes personnels ou des soucis qui ont affecté votre sommeil ?</label>
+        <input type="checkbox" id="sleepDisturbance" name="sleepDisturbance">
+
+        <label for="age">Quel Âge avez-vous ?</label>
+        <input type="number" id="age" name="age" min="0" required>
+
+        <label for="workHours">Heures de travail :</label>
+        <input type="number" id="workHours" name="workHours" min="0" max="24" required>
+
+        <label for="tiredMoment">A quel moment de votre service vous sentiez-vous le plus fatigué ?</label>
+        <input type="text" id="tiredMoment" name="tiredMoment" required>
+
+        <label for="commonErrors">Quel type d’erreur êtes-vous susceptible de commettre quand vous êtes fatigués ?</label>
+        <input type="text" id="commonErrors" name="commonErrors" required>
+
+        <label for="idealSchedule">Si vous aviez la possibilité d’organiser votre journée de travail, quels seraient vos horaires de service ?</label>
+        <input type="text" id="idealSchedule" name="idealSchedule" required>
+
+        <label for="stressFactors">Y a-t-il des facteurs qui sont susceptibles d’augmenter votre niveau de stress et par extension votre fatigue ?</label>
+        <input type="text" id="stressFactors" name="stressFactors" required>
+
+        <label for="tiringJobs">Quel sont les postes les plus fatigants ?</label>
+        <input type="text" id="tiringJobs" name="tiringJobs" required>
+
+        <button type="submit">Soumettre</button>
+    </form>
+</div>
+</body>
+</html>
